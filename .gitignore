@@ -1,7 +1,8 @@
-
+.NEtFLi/AppPackages
+.NEtFLi/Assets
+.NEtFLi/BundleArtifacts
 .vs/NEtFLi/v16/.suo
 *.sln
-*.cs
 *.psd1
 *.appx
 *.dll
@@ -13,7 +14,6 @@
 *.xbf
 *.exe
 *.xml
-*.cs
 *.resw
 *.ilpdb
 *.rsrc
@@ -21,3 +21,9 @@
 *.pdb
 *.exe
 *.xbf
+NEtFLi/Verwaltung.cs
+NEtFLi/Serializer/TMDB+.cs
+NEtFLi/Serializer/TMDB.cs
+NEtFLi/Properties/AssemblyInfo.cs
+NEtFLi/Program.cs
+NEtFLi/APIKEY.cs
