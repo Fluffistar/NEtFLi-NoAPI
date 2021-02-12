@@ -1,4 +1,4 @@
-.NEtFLi/AppPackages
+.NEtFLi/AppPackages/
 .NEtFLi/Assets
 .NEtFLi/BundleArtifacts
 .vs/NEtFLi/v16/.suo
@@ -19,6 +19,8 @@
 *.rsrc
 *.txt
 *.pdb
+**/bin/Debug/
+**/bin/Release/
 *.exe
 *.xbf
 NEtFLi/Verwaltung.cs
