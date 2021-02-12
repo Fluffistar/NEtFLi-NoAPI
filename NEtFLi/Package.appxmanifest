@@ -9,13 +9,13 @@
   <Identity
     Name="9ab845ed-31a6-43ae-941e-b33266f11f49"
     Publisher="CN=Fluffistar"
-    Version="1.0.1.0" />
+    Version="1.0.2.0" />
 
   <mp:PhoneIdentity PhoneProductId="9ab845ed-31a6-43ae-941e-b33266f11f49" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>NEtFLi</DisplayName>
-    <PublisherDisplayName>adamo</PublisherDisplayName>
+    <PublisherDisplayName>Fluffistar</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
