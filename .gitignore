@@ -21,6 +21,7 @@
 *.rsrc
 *.txt
 *.pdb
+*.user
 **/bin/Debug/
 **/bin/Release/
 *.exe
