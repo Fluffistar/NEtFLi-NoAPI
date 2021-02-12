@@ -1,0 +1,76 @@
+﻿<Page
+    x:Class="NEtFLi.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NEtFLi"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+     Background="#FF1C1C1C" RequestedTheme="Dark" Loaded="Page_Loaded">
+    <Page.Resources>
+        <Style x:Key="Scrollbar"  TargetType="GridView">
+            <Setter Property="FontStretch" Value="Expanded"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="ScrollViewer.HorizontalScrollMode" Value="Enabled"/>
+            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Visible"/>
+            <Setter Property="ScrollViewer.VerticalScrollMode" Value="Disabled"/>
+            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Hidden"/>
+            <Setter Property="ItemsPanel">
+                <Setter.Value>
+                    <ItemsPanelTemplate>
+                        <ItemsStackPanel Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="ItemContainerStyle">
+                <Setter.Value>
+                    <Style TargetType="GridViewItem">
+                        <Setter Property="Margin" Value="10,0,10,10"/>
+                    </Style>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <NavigationView x:Name="navbar"  OpenPaneLength="200" IsBackButtonVisible="Collapsed"       PaneTitle="NEtFLi"    SelectionFollowsFocus="Enabled"   >
+
+        <NavigationView.MenuItems >
+            <NavigationViewItem Icon="Find" Content="Search" Tag="SearchPage"></NavigationViewItem>
+            <NavigationViewItem Icon="Library" Content="Home" Tag="HomePage"></NavigationViewItem>
+           
+
+        </NavigationView.MenuItems>
+        <NavigationView.PaneFooter>
+            <NavigationViewList>
+                <NavigationViewItem  Icon="Contact"  Content="Account" Tag="AccountPage" Tapped="NavigationViewItem_Tapped">
+
+                </NavigationViewItem>
+
+            </NavigationViewList>
+        </NavigationView.PaneFooter>
+
+        <RelativePanel>
+            <AutoSuggestBox x:Name="autobox" QuerySubmitted="autobox_QuerySubmitted" TextChanged="autobox_TextChanged_1" Visibility="Collapsed" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignRightWithPanel="True" Margin="20" Width="200" QueryIcon="Find" PlaceholderText="Min. 3 letters "/>
+            <Grid RelativePanel.Below="autobox" x:Name="info" HorizontalAlignment="Stretch" Visibility="Collapsed" Height="500">
+                <Image x:Name="imginfo" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="UniformToFill"/>
+                <Image x:Name="Fsk" Stretch="Fill" Height="150" Width="150" Margin="0,10,10,0" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+                <Border x:Name="b1" Margin="105,10,0,0"  Opacity="0.6" HorizontalAlignment="Left"  Padding="10" CornerRadius="20" Background="{ThemeResource SystemChromeMediumColor}" VerticalAlignment="Top" >
+                    <TextBlock x:Name="Title" FontSize="36" Margin="0,0,0,0"/>
+                </Border>
+                <StackPanel x:Name="genres" Orientation="Horizontal" Spacing ="10" Height="50"  Margin="0,50,295,0" HorizontalAlignment="Right" Width="0" VerticalAlignment="Top" />
+                <ScrollViewer Margin="400,100,300,10" Opacity="0.6" Background="{ThemeResource SystemChromeMediumColor}">
+                    <TextBlock x:Name="Description" FontSize="24" TextWrapping="Wrap"  />
+                </ScrollViewer>
+            </Grid>
+            <ScrollViewer  x:Name="viewer" Margin="0,0,0,0" RelativePanel.Below="info" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
+                <StackPanel x:Name="SerienList" Spacing="30" >
+
+
+                </StackPanel>
+            </ScrollViewer>
+            <Frame x:Name="content" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True"  RelativePanel.AlignTopWithPanel="True" Visibility="Collapsed"/>
+        </RelativePanel>
+    </NavigationView>
+
+</Page>

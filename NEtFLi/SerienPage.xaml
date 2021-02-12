@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="NEtFLi.SerienPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NEtFLi"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+         Background="#FF1C1C1C"
+    RequestedTheme="Dark">
+    <Page.Resources>
+
+    </Page.Resources>
+
+    <Grid x:Name="maingrid" Margin="0,0,0,0">
+        <Image x:Name="layout" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ImageOpened="layout_ImageOpened" Stretch="UniformToFill">
+
+        </Image>
+
+        <Image x:Name="background" Width="700" Height="300" Stretch="Fill" Margin="15,30,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="Fsk" Stretch="Fill" Height="150" Width="150" Margin="735,180,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Border x:Name="b1" Margin="105,50,0,0"  Opacity="0.6" HorizontalAlignment="Left"  Padding="10" CornerRadius="20" Background="{ThemeResource SystemChromeMediumColor}" VerticalAlignment="Top" >
+            <TextBlock x:Name="Title" FontSize="36" Margin="0,0,0,0"/>
+        </Border>
+
+        <Button x:Name="backbtn" Width="70" Height="65" Opacity="0.6" Background="{ThemeResource SystemChromeMediumColor}" Margin="10,10,0,0" VerticalAlignment="Top" Click="backbtn_Click" />
+        <ScrollViewer Margin="890,268,40,0" Opacity="0.6" Background="{ThemeResource SystemChromeMediumColor}" Height="503" VerticalAlignment="Top">
+            <TextBlock x:Name="Description" FontSize="24" TextWrapping="Wrap"  />
+        </ScrollViewer>
+        <ComboBox x:Name="SeasonsCombo" Height="80" FontSize="34" Margin="0,50,50,0" SelectionChanged="SeasonsCombo_SelectionChanged" VerticalAlignment="Top" HorizontalAlignment="Right" Width="200"/>
+        <ListBox x:Name="EpisodenListe"  Background="{ThemeResource SystemChromeMediumColor}" Opacity="0.6" Width="808" Margin="10,351,0,87" FontSize="34" DoubleTapped="EpisodenListe_DoubleTapped" HorizontalAlignment="Left" Tapped="EpisodenListe_Tapped"/>
+
+        <ProgressBar x:Name="loading" Height="138" Background="Transparent"  ShowPaused="False" ShowError="False" Margin="168,0,130,0" IsIndeterminate="True" Foreground="Orange" />
+
+    </Grid>
+</Page>

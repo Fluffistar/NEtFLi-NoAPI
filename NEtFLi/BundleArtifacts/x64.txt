@@ -1,0 +1,6 @@
+MainPackage=D:\Projekte\NOAPI\NEtFLi\NEtFLi\bin\x64\Release\NEtFLi_1.0.1.0_x64.msix
+SymbolPackage=D:\Projekte\NOAPI\NEtFLi\NEtFLi\obj\x64\Release\Symbols\NEtFLi_1.0.1.0_x64.appxsym
+ResourcePack=D:\Projekte\NOAPI\NEtFLi\NEtFLi\bin\x64\Release\NEtFLi_1.0.1.0_scale-100.msix
+ResourcePack=D:\Projekte\NOAPI\NEtFLi\NEtFLi\bin\x64\Release\NEtFLi_1.0.1.0_scale-125.msix
+ResourcePack=D:\Projekte\NOAPI\NEtFLi\NEtFLi\bin\x64\Release\NEtFLi_1.0.1.0_scale-150.msix
+ResourcePack=D:\Projekte\NOAPI\NEtFLi\NEtFLi\bin\x64\Release\NEtFLi_1.0.1.0_scale-400.msix
